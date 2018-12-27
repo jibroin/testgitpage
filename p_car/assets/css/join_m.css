@@ -1,0 +1,260 @@
+@charset "utf-8";
+
+/********************************************
+SUB JOIN
+********************************************/
+.subcontainer {
+	background-color:#fff;
+}
+
+/* SUB HEAD */
+.subhead {
+	overflow:hidden;
+}
+.subhead .tit {
+	display:block;
+	margin:5.3rem auto 2.5rem;
+	font-weight:bold;
+	font-weight:700;
+	font-size:2rem;
+	color:#333;
+	line-height:1;
+	text-align:center;
+	vertical-align:top;
+}
+.subhead .txt {
+	display:block;
+	margin:0 auto 2.75rem;
+    padding:0 2.5rem;
+	font-size:1.4rem;
+	color:#828282;
+	line-height:2rem;
+	text-align:center;
+	vertical-align:top;
+	word-break:keep-all;
+}
+
+/* SUB CONTENT */
+.subcont {
+	position:relative;
+	width:100%;
+	margin:0 auto;
+}
+
+/* 회원가입 폼 */
+.join__form {
+	padding:0 1.25rem;
+}
+.join__form:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+.row {
+	overflow:hidden;
+	clear:both;
+	width:100%;
+}
+.row--chk {
+	
+}
+.row .th {
+	display:none; 
+}
+.row .td {
+	display:block;
+	position:relative;
+	width:100%;
+	height:4rem;
+	margin-bottom:1.1rem;
+	border-bottom:0.1rem solid #dcdcdc;
+	background-color:#f8f8f8;
+}
+.row .td .ipt--txt {
+	display:block;
+	position:relative;
+	z-index:2;
+	width:100%;
+	height:4rem;
+	border:none;
+	border-radius:0;
+	font-size:1.25rem;
+	color:#828282;
+	text-indent:1.6rem;
+	outline:none;
+	background:transparent;
+}
+.row .td .label {
+	position:absolute; 
+	top:0; 
+	left:1.6rem; 
+	font-size:1.25rem; 
+	line-height:4rem; 
+	color:#bebebe;
+    -webkit-transition : opacity 400ms, -webkit-transform 400ms;
+    transition : opacity 400ms, transform 400ms;
+}
+.row .td.focused .label {
+	opacity:0;
+    -webkit-transform : translateX(1.6rem);
+    transform : translateX(1.6rem);
+}
+.row .td.focused input {
+	color:#646464;
+	background-color:#efefef; 
+}
+/* 자동입력 시, 배경색 */
+.row .td .ipt--txt:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 50rem white inset;
+}
+
+/* 체크박스 CUSTOM */
+.chkbox {
+	margin:0 0 1.5rem;
+}
+.chkbox span {
+	display:block;
+	overflow:hidden; 
+	padding-left:2.1rem; 
+	height:1.5rem; 
+	background:url(/p_car/assets/img/m_sprite_chk.png) no-repeat;
+    background-size:1.5rem;
+}
+.chkbox .unchk {
+	background-position:0 0;
+}
+.chkbox .chk {
+	background-position:0 -1.5rem;
+}
+.chkbox span label { 
+	font-size:1.25rem; 
+	line-height:1.65rem;
+	vertical-align:middle;
+	color:#646464;
+}
+.chkbox .unchk input, 
+.chkbox .chk input {
+	-webkit-appearance:none; 
+	-moz-appearance:none; 
+	-ms-appearance:none; 
+	appearance:none;
+	position:absolute;
+	border:0; 
+	height:1px; 
+	width:1px; 
+	opacity:0;
+}
+/* 전체동의 */
+.chkbox.allagree {
+	clear:both;
+	width:100%;
+	margin:0 0 2rem;
+	padding:1.4rem 0 2rem;
+	border-bottom:0.1rem solid #c8c8c8;
+}
+.chkbox.allagree span label {
+	font-weight:bold;
+	font-weight:600; 
+}
+
+/* 이용약관 등 TEXTAREA */
+.terms {
+	display:block;
+}
+.terms__box {
+	overflow:hidden; 
+	overflow-y:auto; 
+	width:100%; 
+	height:12.1rem;
+	margin-bottom:2.5rem; 
+	border:0.1rem solid #e6e6e6; 
+	background-color:#fff;
+	box-sizing:border-box;
+}
+/* Styles specific to this particular page */
+.scroll-pane {
+	width: 100%;
+	height: 12.1rem;
+	overflow-y: auto;
+}
+.horizontal-only {
+	height: auto;
+	max-height: 12.1rem;
+}
+.terms__box .jspPane * {
+	font-size:1.1rem; 
+	color:#bebebe; 
+	line-height:2rem; 
+	letter-spacing:-1px; 
+	word-break:keep-all;
+}
+.terms__box .jspPane div {
+	margin:1.25rem 1.25rem 1.5rem;
+}
+.terms__box .jspPane div:last-child {
+	margin-bottom:0;
+}
+.terms__box .jspPane h2 {
+	margin-bottom:1rem;
+}
+.terms__box .jspPane h3 {
+	margin-bottom:0.75rem;
+}
+.terms__box .jspPane p {
+	margin-bottom:0.25rem;
+}
+.terms__box .jspPane span {
+	display:block; 
+	padding-left:1rem; 
+	padding-bottom:0.25rem;
+}
+.terms__box .jspVerticalBar {
+	right: 0.3rem;
+	top: 0;
+	width: 0.35rem;
+}
+.terms__box .jspVerticalBar .jspArrow {
+    height: 0.3rem;
+}
+
+.terms__box .jspDrag {
+	background: #d2d2d2;
+	border-radius:0.2rem;
+}
+
+.btn--submit {
+	width:100%;
+	height:6rem;
+	margin:1.5rem 0 0;
+	background-color:#fe5f00;
+}
+.btn--submit .btn--join { /* 가입하기 버튼 */
+	width:32rem;
+	height:6rem;
+	margin:0 auto;
+	font-size:0;
+	text-indent:-9999px;
+	background:url(/p_car/assets/img/m_btn_join@640.jpg) no-repeat;
+	background-size:32rem;
+}
+.btn--submit .btn--home { /* 메인으로 돌아가기 버튼 */
+	width:32rem;
+	height:6rem;
+	margin:0 auto;
+	font-size:0;
+	text-indent:-9999px;
+	background:url(/p_car/assets/img/m_btn_home@640.jpg) no-repeat;
+	background-size:32rem;
+}
+
+.btn--download {
+	display:block;
+	width:28.5rem;
+	height:4.5rem;
+	margin:0 auto 7rem;
+	background-position:0 -17.5rem;
+}
+
+/********************************************
+SUB JOIN COMPLETE
+********************************************/

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>뿅카</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="/p_car/assets/vendor/fonts/nanumBarunGothic/fonts.css" />
+<link rel="stylesheet" type="text/css" href="/p_car/assets/css/reset.css?v=20180908" />
+<link rel="stylesheet" type="text/css" href="/p_car/assets/css/style_m.css?v=20180908" />
+<link rel="stylesheet" type="text/css" href="/p_car/assets/css/join_m.css?v=20180908" /> <!-- 회원가입 CSS -->
+<link rel="stylesheet" type="text/css" href="/p_car/assets/vendor/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="/p_car/assets/vendor/jscrollpane/jquery.jscrollpane.css" />
+<script type="text/javascript" src="/p_car/assets/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/p_car/assets/vendor/slick/slick.min.js"></script>
+<script type="text/javascript" src="/p_car/assets/vendor/jscrollpane/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="/p_car/assets/vendor/jscrollpane/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/p_car/assets/js/common_m.js?v=20180908"></script>
+</head>
+
+<body>
+<div class="wrapper">	
+	<!-- SUB CONTAINER -->
+	<div class="subcontainer">
+		<div class="inner">
+			<div class="subhead">
+				<h1 class="tit">회원가입</h1>
+				<p class="txt">뿅카는 만 21세 이상, 운전면허 취득 1년 이후라면  누구나 이용할 수 있습니다.</p>
+			</div>
+			
+			<div class="subcont">
+				<!-- 폼 입력 -->
+				<div class="join__form">
+					<div class="row">
+						<label class="th" for="email"><span>이메일 아이디</span></label>
+						
+						<div class="td">
+							<input type="text" id="email" name="email" class="ipt--txt" value="" maxlength="20" />
+							<p class="label">아이디(이메일)를 입력해주세요.</p>
+						</div>
+					</div>	
+					<div class="row">
+						<label class="th" for="password"><span>비밀번호</span></label>
+						
+						<div class="td">
+							<input type="password" id="password" name="password" class="ipt--txt" value="" maxlength="20" />
+							<p class="label">영문/숫자 조합 6자리 이상</p>
+						</div>
+					</div>	
+					<div class="row">
+						<label class="th" for="repassword"><span>비밀번호 확인</span></label>
+						
+						<div class="td">
+							<input type="password" id="repassword" name="repassword" class="ipt--txt" value="" maxlength="20" />
+							<p class="label">비밀번호 확인</p>
+						</div>
+					</div>
+					
+					<div class="row row--chk">
+						<!-- 전체동의 -->
+						<div class="chkbox allagree">
+							<span class="unchk" id="allCheck"><input type="checkbox" id="" name="" value="N"> <label>뿅카 이용약관 전체동의</label></span>
+						</div> 
+					</div>
+					
+					<div class="row row--txtarea">
+						
+						<!-- 필수&선택동의 -->
+						<div class="chkbox">
+							<span class="unchk" onclick="agreechk(this);"><input type="checkbox" id="" name="" value="N"> <label>이용약관(필수)</label></span>
+						</div>
+						<div class="terms">							
+							<div class="terms__box">
+								<!-- 
+									임의로 넣어두었습니다. 내용에 맞게 태그 변경해주세요.
+									div = 문단
+									h2 = 장
+									h3 = 조
+									p = 내용
+									p > span = 서브 내용(2뎁스)
+									p > span > span .... > span = 뎁스별로 사용하세요
+								-->
+								<div>
+									<h2>제1장 총 칙</h2>
+									
+									<h3>제1조 (목적)</h3>
+		
+									<p>이 약관은 싸이드스텝(이하 "회사")이 운영하는 인터넷 사이트를 통하여 제공하는 전자상거래 관련서비스(이하 "서비스")를 이용함에 있어 회사와 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 함. * PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다.</p>
+								</div>	
+								
+								<div>
+									<h3>제2조 (정의)</h3>
+		
+									<p>①“회사”라 함은 재화 또는 용역을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화 또는 용역을 거래할 수 있도록 설정한 가상의 영업장인 인터넷 쇼핑몰 및 그 인터넷쇼핑몰에서 제공하는 재화 또는 용역에 관한 정보를 제공하기 위하여 주식회사 써머스플랫폼이 설정한 인터넷사이트를 말하며, 아울러 “서비스”를 운영하는 사업자의 의미로도 사용합니다.</p>
+									<p>②이용자라 함은 “회사”의 인터넷사이트에 접속하여 이 약관에 따라 “회사”가 제공하는 서비스를 받는 회원 및 비회원을 말합니다.</p>
+									<p>③회원이라 함은 “회사”에 개인정보를 제공하여 회원등록을 한 자로서, “회사”의 정보를 지속적으로 제공받으며, “회사”가 제공하는 서비스를 계속적으로 이용할 수 있는 자를 말합니다.</p>
+									<p>④비회원이라 함은 회원에 가입하지 않고 “회사”가 제공하는 서비스를 이용하는 자를 말합니다.</p>
+									<p>⑤구매자라 함은 인터넷 쇼핑몰에서 제공하는 재화 또는 용역을 구입할 의사를 “회사”가 온라인으로 제공하는 양식에 맞추어 밝힌 이용자를 말합니다.</p>
+									<p>⑥제휴사라 함은 “회사”와 계약 하에 재화 또는 용역의 노출 및 광고를 목적으로 “회사”에 정보를 제공하고 있는 인터넷쇼핑몰을 말합니다.</p>
+								</div>
+		
+								<div>
+									<h3>제3조 (약관의 명시와 개정)</h3>
+		
+									<p>①“회사”는 이 약관의 내용과 상호, 영업소 소재지, 대표자의 성명, 사업자등록번호, 연락처를 이용자가 알 수 있도록 “회사”의 서비스화면에 게시합니다.</p>
+									<p>②“회사”는 약관의 규제에 관한 법률, 전자문서 및 전자거래기본법, 전자서명법, 정보통신망이용촉진 및 정보보호 등에 관한 법률, 소비자기본법 등 관련법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.</p>
+									<p>③“회사”가 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 공지사항 및 초기화면에 그 적용 일자 30일 이전부터 적용일자 전일까지 공지합니다.</p>
+									<p>④이 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 관계법령 또는 상관례에 따릅니다.</p>
+									<p>⑤”회사”가 전 항에 따라 개정약관을 공지할 때에 이용자가 명시적으로 거부의 의사를 표시하지 않거나 이용계약을 해지하지 않는 경우 개정약관에 동의한 것으로 봅니다.</p>
+									<p>⑥”회사”가 이용자에게 이용약관의 변경을 공지하였음에도 불구하고 이용자가 이를 알지 못하여 발생하는 피해에 대하여 “회사”는 책임지지 않습니다.</p>
+								</div>
+		
+								<div>
+									<h3>제4조 (서비스의 제공 및 한계)</h3>
+		
+									<p>①“회사”는 다음과 같은 업무를 수행합니다. 
+										<span>가. 제휴사에서 판매하는 재화 또는 용역의 가격 및 상품정보를 제공
+											<span>- 부정거래 방지 및 다른 선량한 이용자의 보호를 위함</span>
+											<span>- 최대3년 보관</span>
+										</span>
+										<span>나. 재화 또는 용역에 대한 정보 제공 및 이용자와 제휴사의 구매계약의 중개</span>
+										<span>다.기타 본 조항에서 정한 업무에 부수한 업무</span>
+									</p>
+									<p>②회원은 “회사”가 별도 고지한 서비스에 있어서 이용약관, 개인정보취급방침 및 기타 “회사”가 공지하는 사항을 항상 숙지해야 하며, 이를 숙지하지 못해 생기는 불이익은 회원에게 있습니다.</p>
+									<p>③“회사”가 제공하는 서비스는 이용자와 제휴사간에 재화 또는 용역을 거래할 수 있도록 “회사”의 이용을 허락하거나, 제휴사의 재화 또는 용역의 정보를 제공하는 것만을 목적으로 하며, “회사”는 제휴사가 “회사”에 제공하는 재화 또는 용역의 정보에 관해서는 일체의 책임을 지지 않습니다.</p>
+								</div>
+							</div>
+						</div>
+					
+						<!-- 개인정보 수집 이용 동의(필수) -->
+						<div class="chkbox">
+							<span class="unchk" onclick="agreechk(this);"><input type="checkbox" id="" name="" value="N"> <label>개인정보 수집 이용 동의(필수)</label></span>
+						</div>
+						<div class="terms">
+							<div class="terms__box">
+								<!-- 
+									임의로 넣어두었습니다. 내용에 맞게 태그 변경해주세요.
+									div = 문단
+									h2 = 장
+									h3 = 조
+									p = 내용
+									p > span = 서브 내용(2뎁스)
+									p > span > span .... > span = 뎁스별로 사용하세요
+								-->
+								<div>
+									<h2>수집하는 개인정보 항목 및 수집방법</h2>
+									
+									<p>에이플러스비는 별도의 회원가입 절차 없이 대부분의 컨텐츠에 자유롭게 접근할 수 있습니다. 싸이드스텝은회원제 서비스를 이용하시고자 할 경우 다음의 정보를 입력해주셔야 합니다.
+										<span>- 입력항목 : 희망ID, 비밀번호, 성명, 이메일주소</span>
+										또한 서비스 이용과정이나 사업 처리 과정에서 아래와 같은 정보들이 생성되어 수집될 수 있습니다.</p>
+								</div>	
+							</div>
+						</div>
+						
+						<!-- 마케팅 정보 수신 동의(선택) -->
+						<div class="chkbox">
+							<span class="unchk" onclick="agreechk(this);"><input type="checkbox" id="" name="" value="N"> <label>마케팅 정보 수신 동의(선택)</label></span>
+						</div>
+					</div>
+				</div>
+				<!-- 폼 입력 -->
+				
+				<button type="button" class="btn--submit" onclick="location.href='./join_complete.html';"><span class="btn--join sprite">가입하기</span></button>
+			</div>
+		</div>
+	</div>
+	<!-- //SUB CONTAINER -->
+</div>
+
+<script type="text/javascript">
+//스크롤바 CUSTOM
+$('.terms__box').jScrollPane({
+	showArrows: true,
+	verticalGutter: 5
+});
+</script>
+</body>
+</html>

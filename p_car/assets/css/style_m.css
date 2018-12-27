@@ -1,0 +1,430 @@
+@charset "utf-8";
+
+/********************************************
+LAYOUT
+********************************************/
+.wrapper {
+	overflow:hidden;
+	width:100%;
+    /*max-width:32rem;*/
+    margin:0 auto;
+}
+.wrapper:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+.inner {
+	position:relative;
+	width:100%;
+	margin:0 auto;
+}
+
+/********************************************
+COMMON
+********************************************/
+/* SPRITE IMAGE, 해당 클래스에 background-position 조정 */
+.sprite {
+	display:block;
+	font-size:0;
+	text-indent:-9999px;
+	background:url(/p_car/assets/img/m_sprite_img.png) no-repeat;
+	background-size:35rem;
+}
+img {
+	width:100%;
+	max-width:100%;
+	height:auto;
+	vertical-align:top;
+}
+
+/********************************************
+HEADER
+********************************************/
+
+/* MAIN VISUAL */
+.visual {
+	position:relative;
+    z-index:1;
+    width:100%;
+}
+
+
+/********************************************
+CONTENTS
+********************************************/
+/* 자동차 탭 & 슬라이드 */
+.carcont {
+	clear:both;
+	width:100%;
+}
+
+/* 자동차 탭 공통 타이틀 */
+.tab__commontit {	
+	width:22rem;
+	height:2.5rem;
+	margin:3.2rem auto 2.65rem;
+	background:url(/p_car/assets/img/m_tab_commontit@640.png) no-repeat;
+    background-size:22rem;
+}
+.tab {
+	clear:both;
+	display:block;
+	height:4.35rem;
+	margin:0 1.25rem 4rem;
+	border-top:0.1rem solid #e6e6e6;
+	border-bottom:0.1rem solid #e6e6e6;
+}
+.scrolllist {
+    width:100%;
+    height:100%;
+}
+.tab__list {
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	margin:0 auto;
+}
+.tab__item {
+	display:inline;
+	float:left;
+	width:25%;
+	border-bottom:0.2rem solid #fff;
+}
+.tab__item span {
+	display:block;
+	position:relative;
+	width:100%;
+	padding:1.55rem 0 1.35rem;
+	font-size:1.25rem;
+	color:#c8c8c8;
+	line-height:1;
+	vertical-align:middle;
+	text-align:center;
+}
+.tab__item.active span {
+	font-weight:bold;
+	font-weight:700;
+	color:#fe5f00;
+	border-bottom:0.2rem solid #fe5f00;
+}
+/* 작은 해상도 스크롤 적용 시, 
+@media (min-width:480px) and (max-width:639px){
+    .tab__item {
+        width:25%;
+    }
+}
+@media (max-width:479px) {
+	.tab {	
+		overflow:hidden;
+		position:relative;
+		height:6.5rem;
+		margin:0 2.5rem 5rem;
+	}
+    .scrolllist {
+		overflow-x:auto;
+		overflow-y:hidden;
+		position:relative;
+		width:100%;
+		-webkit-overflow-scrolling: touch;
+	}
+    .tab__list {
+		display:-inline-flex;
+		display:-webkit-inline-box;
+		width:auto;
+	}	
+	.tab__item {
+		position:relative;
+		width:10.7rem;
+	}
+} */
+
+.tab__content {
+	clear:both;
+	position:relative;
+	width:100%;
+	height:30rem;
+	margin:0 auto;
+}
+.tabbox {
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+}
+.tabbox .txt {
+	display:block;
+	margin-bottom:3.5rem;
+	font-size:1.5rem;
+	color:#333;
+	line-height:1.6rem;
+	vertical-align:top;
+	text-align:center;
+	letter-spacing:-1px;
+}
+
+/* 슬라이드 */
+.slide--carproduct {
+	
+}
+.carproduct__list {
+	position:relative;
+}
+.carproduct__item {
+	float:left;
+	width:20rem;
+	padding:0 0 2.5rem;
+	outline:0;
+	opacity:0.3;
+}
+.carproduct__item.slick-current {
+	opacity:1;
+}
+.carproduct__item a {
+	display:block;
+	outline:0;
+}
+.carproduct__item a .thumb {
+	display:block;
+	width:17.5rem;
+	height:15.5rem;
+	margin:0 auto 1.9rem;
+}
+.carproduct__item a .modelprice {
+	display:block;
+	overflow:hidden;
+	font-size:1.6rem;
+	color:#333;
+	line-height:1.7rem;
+	text-align:center;
+	text-indent:1.6rem;
+	letter-spacing:-1.5px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.carproduct__item a .modelprice b {
+	font-weight:bold;
+	font-weight:700;
+}
+
+/* SLICK DOTS CUSTOM */
+.slick-dots {
+	display:block;
+	clear:both;
+	width:100%;
+	text-align:center;
+}
+.slick-dots li {
+	display:inline-block;
+	margin:0 3.75px;
+	outline:0;
+}
+.slick-dots li button {
+	overflow:hidden;
+	width:.6rem;
+	height:.6rem;
+	margin:0;
+	border-radius:0.6rem;
+	font-size:0;
+	text-indent:-9999px;
+	background-color:#d7d7d7;
+	box-sizing:content-box;
+	outline:0;
+	transition:all .2s ease-out;
+}
+.slick-dots li.slick-active button {
+	width:0.9rem;
+	height:0.9rem;
+	margin:0;
+	border-radius:0.9rem;
+	background-color:#fe5f00;
+}
+
+.common_app {
+	clear:both;
+	padding:0 0.75rem;
+	text-align:center;
+}
+.common_app .downloads {
+	overflow:hidden;
+	width:30.5rem;
+	margin:0 auto 2.6rem;
+}
+.common_app .downloads .btnapp {
+	display:inline;
+	float:left;
+	width:14.25rem;
+	height:4.2rem;
+	margin:0 .5rem;
+}
+.common_app .downloads .btnapp--android {
+	background-position:0 0;
+}
+.common_app .downloads .btnapp--ios {
+	background-position:-15rem 0;
+}
+.common_app .txt {
+	display:block;
+	margin-bottom:5rem;
+	font-size:1.4rem;
+	color:#828282;
+	line-height:1;
+	vertical-align:top;
+	text-align:center;
+}
+
+/* 혜택 컨텐츠 */
+.eventcont {
+	clear:both;
+	position:relative;
+	width:100%;
+}
+/* 혜택1 */
+#evt1.eventcont {
+	background-color:#553c37;
+}
+#evt1.eventcont .inner {
+	/* .inner 중복속성은 위에서 정의 */
+	margin:0 auto;
+}
+
+#evt1.eventcont .evt__tit {
+	overflow:hidden;
+	position:absolute;
+	top:-1.55rem;
+	left:50%;
+	z-index:100;
+	width:26.5rem;
+	height:11.6rem;
+	margin-left:-13.25rem;
+	font-size:0;
+	text-indent:-9999px;
+	background:url(/p_car/assets/img/m_evt_tit.png) no-repeat;
+	background-size:26.5rem;
+}
+
+/* 혜택2 */
+#evt2.eventcont {
+	background-color:#f0ecdc;
+}
+#evt2.eventcont .inner {
+	/* .inner 중복속성은 위에서 정의 */
+	margin:0 auto;
+}
+
+
+/********************************************
+FOOTER
+********************************************/
+.footer {
+	clear:both;
+	width:100%;
+	background-color:#e8e5d5;
+}
+.footer .cslink {
+	overflow:hidden;
+	width:100%;
+	height:6.5rem;
+	border-bottom:1px solid #d2d0c0;
+}
+.footer .cslink .inner {
+	display:block;
+	overflow:hidden;
+	position:relative;
+	width:29.5rem;
+	margin:1.75rem auto 0;
+}
+.cslink__icon {
+	float:left;
+}
+.cslink__icon .tit {
+	float:left;
+	height:0.95rem;
+	margin:0.95rem 0.85rem 0 0;
+}
+.cslink__icon.cs {
+	left:1.6rem;
+}
+.cslink__icon.cs .tit {
+	width:4.25rem; 
+	background-position:0 -10rem;
+}
+.cslink__icon.sns {
+	left:11.15rem;
+}
+.cslink__icon.sns .tit {
+	width:7.4rem;
+	background-position:-5rem -10rem;
+}
+
+.cslink__icon .snsicon {
+	display:inline;
+	float:left;
+	width:3rem;
+	height:3rem;
+	margin-right:1rem;
+}
+.cslink__icon .snsicon--kakao {
+	background-position:0 -12.5rem;	
+}
+.cslink__icon .snsicon--fb {
+	background-position:-3.5rem -12.5rem;	
+}
+.cslink__icon .snsicon--insta {
+	background-position:-7rem -12.5rem;	
+}
+.cslink__icon .snsicon--nblog {
+	background-position:-10.5rem -12.5rem;	
+}
+
+.copyright {
+	
+}
+.copyright .inner {	
+	padding:2.75rem 0 5rem;
+	text-align:center;
+}
+.copyright .inner p {
+	margin:0;
+	font-size:1.1rem;
+	color:#a0a091;
+	line-height:1.9rem;
+	letter-spacing:-1px;
+	vertical-align:top;
+}
+.copyright .inner p span, 
+.copyright .inner p a {
+	display:inline-block;
+	padding:0 0.4rem;
+	font-size:1.1rem;
+	color:#a0a091;
+}
+.copyright .inner .footlogo {
+	display:block;
+	width:6rem;
+	height:2rem;
+	margin:2.75rem auto 0;
+	background-position:-15rem -10rem;
+}
+
+.floating {
+	position:fixed;
+	top:0;
+	left:50%;
+	z-index:1000;
+	width:100%;
+	/*max-width:640px;*/
+	transform:translateX(-50%);
+	background-color:#282828;
+}
+.floating a {
+	display:block;
+	width:32rem;
+	height:6.5rem;
+	margin:0 auto;
+	font-size:0;
+	text-indent:-9999px;
+	background:url(/p_car/assets/img/m_btn_join.jpg) no-repeat;
+	background-size:32rem;
+}
